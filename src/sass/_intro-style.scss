@@ -1,0 +1,85 @@
+﻿.intro {
+  margin: 0;
+  background: #000;
+
+  video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+    background: url('../img/bg-for-video.png') no-repeat;
+    background-size: cover;
+    transition: 1s opacity;
+  }
+
+  #content-box {
+    font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;
+    font-weight: 100;
+    background: rgba(0,0,0,0.3);
+    color: white;
+    padding: 2rem;
+    width: 33%;
+    margin-top: 70px;
+    margin-right: 20px;
+    float: right;
+    font-size: 1.2rem;
+
+    #button-about {
+      display: block;
+      width: 80%;
+      padding: .4rem;
+      border: none;
+      margin: 1rem auto;
+      font-size: 1.3rem;
+      background: $semi-transpearent-dark;
+      color: #fff;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: .3s background;
+      text-align: center;
+
+      &:hover {
+        background: $semi-transparet-orange;
+        text-decoration:none;
+      }
+    }
+  }
+
+  h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin-top: 0;
+    letter-spacing: .3rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .intro #content-box {
+    width: 70%;
+    font-weight: normal;
+  }
+
+  .intro h1 {
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-device-width: 800px) {
+  .intro {
+    background: url('../img/bg-for-video.png') #000 no-repeat center center fixed;
+    background-size: cover;
+  }
+
+  .intro #bgvid {
+    display: block;
+  }
+
+  .intro #content-box {
+    width: 50%;
+  }
+}

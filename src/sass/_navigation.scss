@@ -1,0 +1,16 @@
+﻿.navbar {
+  margin-bottom: 0px;
+  border-radius: 0px;
+
+  .glyphicon {
+    padding-right: .5em;
+  }
+
+  .nav li {
+    &:hover {
+      .glyphicon {
+        color: $orange;
+      }
+    }
+  }
+}

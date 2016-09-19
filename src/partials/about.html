@@ -1,0 +1,76 @@
+﻿<div>
+  <div ng-controller="CarouselCtrl" id="slides_control">
+    <div>
+      <carousel interval="myInterval">
+        <slide ng-repeat="slide in slides" active="slide.active">
+          <img ng-src="{{slide.image}}" сlass="img-carousel">
+          <div class="carousel-caption">
+            <!--<h4>Slide {{$index+1}}</h4>-->
+          </div>
+        </slide>
+      </carousel>
+    </div>
+  </div>
+  <div class="container marketing">
+
+    <!-- Three columns of text below the carousel -->
+    <div class="row">
+      <div class="col-lg-4">
+        <img  src="./img/marketing-icon-cat.svg" alt="Generic placeholder image"  height="140">
+        <h2>Пухнастики</h2>
+        <p>У Вас кішка? Собака? Кролик? Всі відразу? Ми знаємо тонкощі догляду за тваринами-гроумінг, харчуванння, після операційні процедури.</p>
+        <p><a class="btn btn-default" href="#/about" role="button">Детально »</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <img src="./img/marketing-icon-fish.svg" alt="Generic placeholder image" height="140">
+        <h2>Акваріумістика</h2>
+        <p>Рибки, краби, міні скати чи живі коралові рифи? Справимось з будь якою проблемою. Навчимо як доглядати за прісним чи солоним акваріумом.</p>
+        <p><a class="btn btn-default" href="#/about" role="button">Детально »</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <img src="./img/marketing-icon-reptaile.svg" alt="Generic placeholder image"  height="140">
+        <h2>Тераріумістика</h2>
+        <p>Ми знаємо , як правильно доглядати і вирощувати тварин в тераріумі. Допоможимо створити та декорувати Ваш тераріум</p>
+        <p><a class="btn btn-default" href="#/about" role="button">Детально »</a></p>
+      </div><!-- /.col-lg-4 -->
+    </div><!-- /.row -->
+    <!-- START THE FEATURETTES -->
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette" id="mamals">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">Догляд за пухнастаками. <span class="text-muted">Коти, собаки чи інші?</span></h2>
+        <p class="lead">Кішки люблять догляд і увагу. Важко встановити, коли вперше дикі кішки стали жити разом з людиною. За однією з версій приручили кішок єгиптяни, які цінували їх передусім як відмінних вартових зерна. У стародавньому Єгипті кішок обожнювали. Котячий вигляд був на зображеннях і скульптурах великому богові сонця Ра, якого іноді називали “Великим котом”. За вбивство кішки накладали великий штраф, а при її природній смерті, здійснювалася траурна церемонія. На знак трауру єгиптяни збривали собі брови. Також, як і фараонів, кішок муміфікували. У Європу кішки потрапили завдяки контрабандистам з Греції, які крали цих тварин і підпільно вивозили на батьківщину для боротьби з мишами. Але не лише одних мишей їсти кішкам, треба ще і знати як правильно годувати кішок, щоб вони залишалися здоровими.</p>
+      </div>
+      <div class="col-md-5">
+        <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="500x500" src="http://elitefon.ru/images/201211/elitefon.ru_23023.jpg" data-holder-rendered="true">
+      </div>
+    </div>
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 col-md-push-5">
+        <h2 class="featurette-heading">Догляд за акваріумом. <span class="text-muted">Солоний чи прісний?</span></h2>
+        <p class="lead">Як тільки ваш акваріум буде облаштований належним чином і в ньому вже будуть жити рибки, вам знадобиться періодично доглядати і підтримувати в ньому певне середовище, щоб ваші рибки росли, були здоровими і радували вас своєю красою, а сам акваріум був чистим і доглянутим . Цей догляд можна позначити як щоденний і періодичний (1 раз на тиждень або 1 раз в два тижні). Давайте розглянемо, в чому полягатиме ваш щоденний догляд за акваріумом:</p>
+      </div>
+      <div class="col-md-5 col-md-pull-7">
+        <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="500x500" src="http://forumimage.ru/uploads/20110417/13030262878200924.jpg" data-holder-rendered="true">
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">Догляд за тераріумом <span class="text-muted">Рептилії чи амфібії,.</span></h2>
+        <p class="lead">Для різних видів тераріумів застосовують грунти різного складу, про що стисло згадувалося при описі типів тераріумів. Зупинимося докладніше на цьому важливому компоненті біотопу.
+Для тераріумів типу "пустеля" застосовується дрібний просіяний пісок. Так як рослини в такому грунті не ростуть або ростуть вкрай погано, то їх висаджують у горщики, які, у свою чергу, закопують у грунт і камуфлюють камінням. Пісок можна тонувати, надавати йому певні відтінки, що виділяють тварин. Так, для додання піщаного грунту червонуватого відтінку в пісок додають товчений обпалена цегла, темного відтінку - дрібний деревне вугілля, білого - крейда.
+В тераріумах, що імітують лісові біотопи і скелі, під шар досить родючого грунту треба обов'язково поміщати дренаж - дрібну гальку, керамзит, черепки квіткових горщиків і т. п. У такому грунті добре ростуть практично всі наземні рослини, що рекомендуються для тераріумів, крім сукулентів. Від закисання грунту можна зберегти додаванням деревного вугілля. У гірських тераріумах родючий грунт доцільно поміщати в ущелини і простору між камінням..</p>
+      </div>
+      <div class="col-md-5">
+        <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="500x500" src="http://myturtle.ru/wp-content/uploads/2016/04/2-7.jpg" data-holder-rendered="true">
+      </div>
+    </div>
+    <hr class="featurette-divider">
+  </div>
+</div>

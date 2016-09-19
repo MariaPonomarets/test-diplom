@@ -1,0 +1,26 @@
+﻿
+#slides_control {
+  margin-top:50px;
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+.btn-default:hover{
+  border-color:$orange;
+  background-color:$semi-transparet-orange;
+  color:$white;
+}
+.img-carousel {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+}
+.left .right{
+  display:block;
+}
+
+.marketing {
+  margin-top:30px;
+  position: relative;
+  text-align: center;
+}

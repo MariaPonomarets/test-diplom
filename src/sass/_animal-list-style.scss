@@ -1,0 +1,72 @@
+﻿#animal-list {
+  margin-top: 100px;
+
+  .img-center {
+    margin: 0 auto;
+  }
+  a{
+    color:$black;
+  }
+  .sort-button {
+    width: 80%;
+    height: 40px;
+    background-color: transparent;
+    border-radius: 5px;
+    border-color: $orange;
+    font-size: 20px;
+    font-weight: 400;
+
+    &:hover {
+      background-color: $semi-transparet-orange;
+      color: $white;
+      -webkit-filter: drop-shadow(3px 3px 10px $orange); /* Chrome, Safari, Opera */
+      filter: drop-shadow(3px 3px 10px $orange);
+    }
+  }
+  .controls{
+    margin-top:10px;
+  }
+  .search {
+    @extend .sort-button;
+    padding-left: 5px;
+
+    &:hover {
+      background-color: $white;
+      color: $black;
+    }
+  }
+
+  .element {
+    &:hover {
+      img {
+        -webkit-filter: drop-shadow(6px 6px 20px $orange); /* Chrome, Safari, Opera */
+        filter: drop-shadow(6px 6px 20px $orange);
+        cursor: pointer;
+      }
+    }
+  }
+
+  .active {
+    cursor: pointer;
+
+    &:hover {
+      color: $orange;
+    }
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  hr {
+    border-color: $semi-transparet-orange;
+  }
+
+  .page-header {
+    border-color: $semi-transparet-orange;
+  }
+  .comment-list{
+    max-height:300px;
+    overflow-y:scroll;
+  }
+}

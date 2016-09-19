@@ -1,0 +1,86 @@
+﻿<div class="container" ng-controller="animalscntrl" id="animal-list">
+
+  <!-- Introduction Row -->
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="col-lg-4 col-sm-6 controls text-center">
+        <button class="sort-button" ng-click="sortByNewDate()">From new to old</button>
+      </div>
+      <div class="col-lg-4 col-sm-6 controls text-center">
+        <button class="sort-button" ng-click="sortByOldDate()">From old to new</button>
+      </div>
+      <div class="col-lg-4 col-sm-6 controls text-center">
+        <input class="search" type="text" placeholder="search" ng-model="searchText" />
+      </div>
+
+    </div>
+  </div>
+  <!-- Animals list Row -->
+  <div class="row">
+    <div class="col-lg-12">
+      <h2 class="page-header">Наші котики</h2>
+    </div>
+    <div class="col-lg-4 col-sm-6 element text-center" ng-repeat="elem in animalList|filter:searchText">
+      <img class="img-circle img-responsive img-center" ng-src="{{elem.photo}}" alt="" ng-click="showInfo(elem)">
+      <h3>
+        {{elem.name}}
+        <a href="#/animals-map" ng-click="showOnMap(elem)"><span class="glyphicon glyphicon-map-marker active" title="Знайти на карті"></span></a>
+      </h3>
+      <p>{{elem.dateAdd}}</p>
+    </div>
+  </div>
+  <hr>
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h3 class="modal-title text-center">
+            {{selected.name}}
+            <a href="#/animals-map" ng-click="showOnMap(selected)"><span class="glyphicon glyphicon-map-marker active" title="Знайти на карті"></span></a>
+          </h3>
+        </div>
+        <div class="modal-body">
+          <img class="img-circle img-responsive img-center" ng-src="{{selected.photo}}" alt="">
+          <p class="text-center">{{selected.dateAdd}}</p>
+          <div class="text-center">
+            <h3>Коментарі</h3>
+            <hr />
+            <div class="comment-list">
+              <div ng-repeat="elem in selected.comments">
+                <p>{{elem.name}} <span>{{elem.date}}</span></p>
+                <p>{{elem.message}}</p>
+                <hr />
+              </div>
+            </div>
+            <form ng-submit="sendData()">
+              <div class="form-group">
+                <label for="usr">Name:</label>
+                <input type="text" class="form-control" id="name" ng-model="name" required >
+              </div>
+              <div class="form-group">
+                <label for="pwd">Email:</label>
+                <input type="email" class="form-control" id="email"  ng-model="email" required>
+              </div>
+              <div class="form-group">
+                <label for="comment">Comment:</label>
+                <textarea class="form-control" rows="5" id="message" ng-model="message" required ></textarea>
+              </div>
+              <input type="submit" class="btn btn-default active" value="Додати коментар" >
+            </form>
+            
+
+          </div>
+        </div>
+        <div class="modal-footer">
+          
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>

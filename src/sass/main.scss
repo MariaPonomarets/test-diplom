@@ -1,0 +1,16 @@
+﻿//@import "_reset.scss";
+@import "_colors.scss";
+@import "_navigation.scss";
+
+@import "_intro-style.scss";
+@import "_about-style.scss";
+@import "_map.scss";
+@import "_animal-list-style.scss";
+
+body {
+  font-family: Arial;
+
+  input, a, button {
+    outline: none;
+  }
+}
